@@ -20,7 +20,6 @@ public class StikerTest {
         wait = new WebDriverWait(driver, 10);
     }
 
-
     @After
     public void afterTest() {
         System.out.println("Завершение работы браузера");
@@ -28,7 +27,7 @@ public class StikerTest {
     }
 
     @Test
-    public void adminPanelTest() throws InterruptedException {
+    public void stickerTest() {
         System.out.println("Открыть главную старницу ");
         driver.get("http://localhost/litecart/en/");
 
