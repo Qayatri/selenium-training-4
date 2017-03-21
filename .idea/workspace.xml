@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7283398e-388b-4e7e-a093-f1207f9f2b80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/StikerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/StikerTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/StikerTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="AdminPanelTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/AdminPanelTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="47" column="5" lean-forward="true" selection-start-line="34" selection-start-column="2" selection-end-line="47" selection-end-column="5" />
+            <state relative-caret-position="247">
+              <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,8 +49,8 @@
       <file leaf-file-name="StikerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/StikerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="436">
+              <caret line="44" column="79" lean-forward="true" selection-start-line="44" selection-start-column="79" selection-end-line="44" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -946,9 +945,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="StikerTest - 2017.03.21 at 16h 07m 44s.xml">
-      <configuration name="StikerTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="StikerTest - 2017.03.21 at 16h 10m 19s.xml">
       <configuration name="StikerTest" configurationId="JUnit" />
     </history-entry>
@@ -974,6 +970,9 @@
       <configuration name="StikerTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="StikerTest - 2017.03.21 at 16h 51m 33s.xml">
+      <configuration name="StikerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="StikerTest - 2017.03.21 at 17h 05m 56s.xml">
       <configuration name="StikerTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1074,8 +1073,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/AdminPanelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="47" column="5" lean-forward="true" selection-start-line="34" selection-start-column="2" selection-end-line="47" selection-end-column="5" />
+        <state relative-caret-position="247">
+          <caret line="35" column="46" lean-forward="true" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1084,8 +1083,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/StikerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="436">
+          <caret line="44" column="79" lean-forward="true" selection-start-line="44" selection-start-column="79" selection-end-line="44" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

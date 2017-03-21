@@ -41,10 +41,10 @@ public class StikerTest {
         System.out.println("Всего товаров : " + ducks.size());
 
         for (WebElement duck : ducks) {
-            //количество стикеров у элемента
-            int stickersNum = duck.findElements(By.className("sticker")).size();
-            //System.out.println(stickersNum);
-            Assert.assertTrue(stickersNum == 1);
+            //количество стикеров у товаров
+            int stickerSum = duck.findElements(By.className("sticker")).size();
+            //System.out.println(stickerSum);
+            Assert.assertTrue(stickerSum == 1);
         }
 
     }
