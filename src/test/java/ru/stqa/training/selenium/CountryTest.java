@@ -44,7 +44,7 @@ public class CountryTest {
 
         System.out.println("Страны - проверка сортировки");
         driver.findElement(By.cssSelector("#app-:nth-child(3)")).click();
-        countrySort(5);
+        countrySort(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(5) > a"));
 
         System.out.println("Зоны - проверка сортировки, если есть в стране");
         zoneCountrySort();
@@ -68,22 +68,9 @@ public class CountryTest {
         }
     }
 
-    private void countrySort(int index){
-        List<WebElement> countryElements = new ArrayList<> ();
-        switch (index) {
-            case 5:
-                countryElements = driver.findElements(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(5) > a"));
-                break;
-            case 3:
-                countryElements = driver.findElements(By.cssSelector("#table-zones td:nth-child(3)"));
-                break;
-            case 7:
-                countryElements = driver.findElements(By.cssSelector("select[name*=zone_code] [selected]"));
-                break;
-            default:
-                break;
-        }
-
+    private void countrySort(By index){
+        List<WebElement> countryElements;
+        countryElements = driver.findElements(index);
 
         List<String> countryNames = new ArrayList<>();
 
@@ -99,7 +86,7 @@ public class CountryTest {
         List<WebElement> countryElements = driver.findElements(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(6)"));
         int[] zoneCount = new int[countryElements.size()];
         for (int i = 0; i < countryElements.size(); i++) {
-            //System.out.println(countryElements.get(i).getText());
+//            System.out.println(countryElements.get(i).getText());
             zoneCount[i] = Integer.parseInt(countryElements.get(i).getText());
         }
         System.out.println("**********");
@@ -107,7 +94,7 @@ public class CountryTest {
             if (zoneCount[i] > 0) {
 //                System.out.println(driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(5) a")).getText());
                 driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(5) a")).click();
-                countrySort(3);
+                countrySort(By.cssSelector("#table-zones td:nth-child(3)"));
                 driver.navigate().back();
             }
 
@@ -126,7 +113,7 @@ public class CountryTest {
             if (zoneCount[i] > 0) {
 //                System.out.println(driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(3) a")).getText());
                 driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(3) a")).click();
-                countrySort(7);
+                countrySort(By.cssSelector("select[name*=zone_code] [selected]"));
                 driver.navigate().back();
             }
 
