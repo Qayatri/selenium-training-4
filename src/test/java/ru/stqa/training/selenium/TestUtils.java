@@ -14,6 +14,7 @@ public final class TestUtils {
     }
 
     public static void loginAsAdmin(WebDriver webDriver, WebDriverWait wait) {
+        System.out.println("Авторизация админа");
         webDriver.findElement(By.name("username")).sendKeys("admin");
         webDriver.findElement(By.name("password")).sendKeys("admin");
         webDriver.findElement(By.name("login")).click();

@@ -38,13 +38,13 @@ public class AdminPanelTest {
         System.out.println("Открыть старницу http://192.168.1.98/litecart/admin");
         driver.get("http://localhost/litecart/admin");
 
-        System.out.println("Авторизация админа");
+        //Вход
         TestUtils.loginAsAdmin(driver, wait);
 
         System.out.println("Выполнение теста");
         clickMenuList();
 
-        System.out.println("Выход");
+        //Выход
         TestUtils.logout(driver, wait);
     }
 
