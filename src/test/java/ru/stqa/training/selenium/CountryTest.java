@@ -43,10 +43,15 @@ public class CountryTest {
         TestUtils.loginAsAdmin(driver, wait);
 
         System.out.println("Страны - проверка сортировки");
-        countrySort();
+        driver.findElement(By.cssSelector("#app-:nth-child(3)")).click();
+        countrySort(5);
 
         System.out.println("Зоны - проверка сортировки, если есть в стране");
+        zoneCountrySort();
 
+        System.out.println("Геозоны - проверка сортировки списка зон");
+        driver.findElement(By.cssSelector("#app-:nth-child(6)")).click();
+        geoZoneSort();
 
         // Выход
         TestUtils.logout(driver, wait);
@@ -63,16 +68,69 @@ public class CountryTest {
         }
     }
 
-    private void countrySort(){
-        driver.findElement(By.cssSelector("#app-:nth-child(3)")).click();
-        List<WebElement> countryElements = driver.findElements(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(5) > a"));
-
-        List<String> countryNames = new ArrayList<>();
-        for (WebElement currentElement : countryElements) {
-            countryNames.add(currentElement.getText());
+    private void countrySort(int index){
+        List<WebElement> countryElements = new ArrayList<> ();
+        switch (index) {
+            case 5:
+                countryElements = driver.findElements(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(5) > a"));
+                break;
+            case 3:
+                countryElements = driver.findElements(By.cssSelector("#table-zones td:nth-child(3)"));
+                break;
+            case 7:
+                countryElements = driver.findElements(By.cssSelector("select[name*=zone_code] [selected]"));
+                break;
+            default:
+                break;
         }
 
+
+        List<String> countryNames = new ArrayList<>();
+
+        for (WebElement currentElement : countryElements) {
+            countryNames.add(currentElement.getText());
+//            System.out.println(currentElement.getText());
+        }
         assertIsAlphabeticalOrder(countryNames);
+
+    }
+
+    private void zoneCountrySort(){
+        List<WebElement> countryElements = driver.findElements(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(6)"));
+        int[] zoneCount = new int[countryElements.size()];
+        for (int i = 0; i < countryElements.size(); i++) {
+            //System.out.println(countryElements.get(i).getText());
+            zoneCount[i] = Integer.parseInt(countryElements.get(i).getText());
+        }
+        System.out.println("**********");
+        for (int i = 0; i < zoneCount.length; i++){
+            if (zoneCount[i] > 0) {
+//                System.out.println(driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(5) a")).getText());
+                driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(5) a")).click();
+                countrySort(3);
+                driver.navigate().back();
+            }
+
+        }
+    }
+
+    private void geoZoneSort(){
+        List<WebElement> countryElements = driver.findElements(By.cssSelector("table.dataTable > tbody > tr.row > td:nth-child(4)"));
+        int[] zoneCount = new int[countryElements.size()];
+        for (int i = 0; i < countryElements.size(); i++) {
+//            System.out.println(countryElements.get(i).getText());
+            zoneCount[i] = Integer.parseInt(countryElements.get(i).getText());
+        }
+        System.out.println("**********");
+        for (int i = 0; i < zoneCount.length; i++){
+            if (zoneCount[i] > 0) {
+//                System.out.println(driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(3) a")).getText());
+                driver.findElement(By.cssSelector(".row:nth-child(" + (i+2) + ") td:nth-child(3) a")).click();
+                countrySort(7);
+                driver.navigate().back();
+            }
+
+        }
 
     }
 
