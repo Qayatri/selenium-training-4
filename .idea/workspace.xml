@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7283398e-388b-4e7e-a093-f1207f9f2b80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TrueProduct.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -53,8 +51,8 @@
       <file leaf-file-name="CountryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+            <state relative-caret-position="-140">
+              <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1052,9 +1050,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CountryTest - 2017.03.22 at 15h 55m 01s.xml">
-      <configuration name="CountryTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CountryTest - 2017.03.22 at 15h 55m 44s.xml">
       <configuration name="CountryTest" configurationId="JUnit" />
     </history-entry>
@@ -1080,6 +1075,9 @@
       <configuration name="CountryTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CountryTest - 2017.03.22 at 16h 32m 32s.xml">
+      <configuration name="CountryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CountryTest - 2017.03.22 at 16h 34m 03s.xml">
       <configuration name="CountryTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1263,8 +1261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+        <state relative-caret-position="-140">
+          <caret line="80" column="48" lean-forward="false" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
