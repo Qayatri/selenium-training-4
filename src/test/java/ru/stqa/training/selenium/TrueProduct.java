@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 (цвета надо проверить на каждой странице независимо, при этом цвета на разных страницах могут не совпадать)
 г) акционная цена крупнее, чем обычная (это тоже надо проверить на каждой странице независимо)
 */
+
 public class TrueProduct {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -38,10 +39,7 @@ public class TrueProduct {
     @Test
     public void countryTest() throws InterruptedException {
         System.out.println("Открыть старницу http://192.168.1.98/litecart/admin");
-        driver.get("http://localhost/litecart/admin");
-
-        // Вход
-        TestUtils.loginAsAdmin(driver, wait);
+        driver.get("http://localhost/litecart/en");
 
         System.out.println("Страны - проверка сортировки");
         driver.findElement(By.cssSelector("#app-:nth-child(3)")).click();
@@ -54,8 +52,6 @@ public class TrueProduct {
         driver.findElement(By.cssSelector("#app-:nth-child(6)")).click();
 
 
-        // Выход
-        TestUtils.logout(driver, wait);
     }
 
 }
