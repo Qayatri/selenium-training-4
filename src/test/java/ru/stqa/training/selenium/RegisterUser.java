@@ -1,6 +1,7 @@
 package ru.stqa.training.selenium;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -101,7 +102,7 @@ public class RegisterUser {
             driver.findElement(By.cssSelector("[name=newsletter]")).click();
 
         driver.findElement(By.cssSelector("[name=create_account]")).click();
-        wait.until(titleIs("Online Store | My Store"));
+        Assert.assertEquals("Account", driver.findElement(By.cssSelector("#box-account > h3")).getText());
         driver.findElement(By.linkText("Logout")).click();
     }
 
