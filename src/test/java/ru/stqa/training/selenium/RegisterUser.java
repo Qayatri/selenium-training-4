@@ -24,6 +24,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 
 В форме регистрации есть капча, её нужно отключить в админке учебного приложения на вкладке Settings -> Security.
  */
+
 public class RegisterUser {
     private WebDriver driver;
     private WebDriverWait wait;
@@ -89,13 +90,13 @@ public class RegisterUser {
         driver.findElement(By.cssSelector("[name=password]")).sendKeys(password);
         driver.findElement(By.cssSelector("[name=confirmed_password]")).sendKeys(password);
 
-        new Select(driver.findElement(By.cssSelector("[name=country_code]"))).selectByValue(countryValue);  //Выбор страны
+        new Select(driver.findElement(By.cssSelector("[name=country_code]"))).selectByValue(countryValue);
 
-        wait.until(elementToBeClickable(By.cssSelector("select[name=zone_code]")));                         // Ожидание подгрузки штатов
-        Select selectState = new Select(driver.findElement(By.cssSelector("select[name=zone_code]")));      //Выбор штата
+        wait.until(elementToBeClickable(By.cssSelector("select[name=zone_code]")));
+        Select selectState = new Select(driver.findElement(By.cssSelector("select[name=zone_code]")));
         selectState.selectByIndex(new Random().nextInt(selectState.getOptions().size()));
 
-// Отключение подписки
+
         if (driver.findElement(By.cssSelector("[name=newsletter]")).isSelected())
             driver.findElement(By.cssSelector("[name=newsletter]")).click();
 
