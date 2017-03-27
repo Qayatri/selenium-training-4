@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7283398e-388b-4e7e-a093-f1207f9f2b80" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -28,8 +30,8 @@
       <file leaf-file-name="CountryTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="39" />
+            <state relative-caret-position="414">
+              <caret line="74" column="54" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,20 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StikerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/StikerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NewProduct.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
+            <state relative-caret-position="85">
               <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,11 +63,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewWindowTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NewWindowTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+            <state relative-caret-position="471">
+              <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowserMessage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,10 +120,16 @@
       <file leaf-file-name="TestUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            <state relative-caret-position="193">
+              <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2361#2362#0" expanded="true" />
+                <element signature="e#2407#2408#0" expanded="true" />
+                <element signature="e#2505#2506#0" expanded="true" />
+                <element signature="e#2563#2564#0" expanded="true" />
+                <element signature="e#2655#2656#0" expanded="true" />
+                <element signature="e#2708#2709#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,6 +156,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+      <find>productLink</find>
       <find>ExpectedCondition</find>
     </findStrings>
   </component>
@@ -502,11 +513,12 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/AdminPanelTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestTeset.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/RegisterUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TrueProduct.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java" />
       </list>
     </option>
   </component>
@@ -615,33 +627,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.NewWindowTest">
-    <configuration default="false" name="RegisterUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.stqa.training.selenium.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="java-example_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.stqa.training.selenium" />
-      <option name="MAIN_CLASS_NAME" value="ru.stqa.training.selenium.RegisterUser" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.BrowserMessage">
     <configuration default="false" name="NewProduct.newProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -734,6 +720,32 @@
       <option name="MAIN_CLASS_NAME" value="ru.stqa.training.selenium.NewWindowTest" />
       <option name="METHOD_NAME" value="CheckOpenWindows" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BrowserMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.training.selenium.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="java-example_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.stqa.training.selenium" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.training.selenium.BrowserMessage" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -1011,19 +1023,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.RegisterUser" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.NewProduct.newProduct" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.NewProduct" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.NewWindowTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.NewWindowTest.CheckOpenWindows" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.NewProduct.newProduct" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.NewProduct" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.NewWindowTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.NewWindowTest.CheckOpenWindows" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BrowserMessage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.NewWindowTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NewWindowTest.CheckOpenWindows" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NewProduct" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NewProduct.newProduct" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RegisterUser" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BrowserMessage" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.NewWindowTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NewWindowTest.CheckOpenWindows" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NewProduct" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.NewProduct.newProduct" />
       </list>
     </recent_temporary>
   </component>
@@ -1047,26 +1059,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NewProduct - 2017.03.27 at 14h 11m 15s.xml">
-      <configuration name="NewProduct" configurationId="JUnit" />
+    <history-entry file="BrowserMessage - 2017.03.27 at 18h 24m 25s.xml">
+      <configuration name="BrowserMessage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewProduct - 2017.03.27 at 14h 12m 58s.xml">
-      <configuration name="NewProduct" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NewWindowTest - 2017.03.27 at 14h 15m 10s.xml">
-      <configuration name="NewWindowTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NewWindowTest - 2017.03.27 at 14h 46m 52s.xml">
-      <configuration name="NewWindowTest" configurationId="JUnit" />
+    <history-entry file="BrowserMessage - 2017.03.27 at 18h 29m 26s.xml">
+      <configuration name="BrowserMessage" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NewWindowTest - 2017.03.27 at 15h 35m 33s.xml">
       <configuration name="NewWindowTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 14h 39m 29s.xml">
-      <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
+    <history-entry file="NewWindowTest - 2017.03.27 at 16h 27m 07s.xml">
+      <configuration name="NewWindowTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 14h 47m 53s.xml">
-      <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
+    <history-entry file="NewWindowTest - 2017.03.27 at 17h 42m 40s.xml">
+      <configuration name="NewWindowTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NewWindowTest - 2017.03.27 at 18h 01m 39s.xml">
+      <configuration name="NewWindowTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 14h 59m 08s.xml">
       <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
@@ -1077,6 +1086,9 @@
     <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 15h 30m 28s.xml">
       <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 17h 56m 06s.xml">
+      <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="6" />
@@ -1085,13 +1097,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280522" sideWeight="0.4290288" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280522" sideWeight="0.42369264" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280522" sideWeight="0.5709712" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2609506" sideWeight="0.33084312" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271202" sideWeight="0.67716116" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2609506" sideWeight="0.6691569" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1119,10 +1131,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="9" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1261,6 +1281,12 @@
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2361#2362#0" expanded="true" />
+            <element signature="e#2407#2408#0" expanded="true" />
+            <element signature="e#2505#2506#0" expanded="true" />
+            <element signature="e#2563#2564#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1414,26 +1440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="55" column="8" lean-forward="true" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/RegisterUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -1456,18 +1462,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        <state relative-caret-position="193">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2361#2362#0" expanded="true" />
+            <element signature="e#2407#2408#0" expanded="true" />
+            <element signature="e#2505#2506#0" expanded="true" />
+            <element signature="e#2563#2564#0" expanded="true" />
+            <element signature="e#2655#2656#0" expanded="true" />
+            <element signature="e#2708#2709#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="56" column="50" lean-forward="true" selection-start-line="56" selection-start-column="50" selection-end-line="56" selection-end-column="50" />
+        <state relative-caret-position="471">
+          <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="74" column="54" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

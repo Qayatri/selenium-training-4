@@ -8,15 +8,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class NewWindowTest {
-    private WebDriver driver;
+    private EventFiringWebDriver driver;
     private WebDriverWait wait;
     private String mainWindow;
     private Set<String> oldWindows;
@@ -27,9 +33,18 @@ public class NewWindowTest {
 
     @Before
     public void beforeTest() {
+
+        LoggingPreferences logPrefs = new LoggingPreferences();
+        logPrefs.enable(LogType.BROWSER, Level.ALL);
+
+        DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
+
         System.out.println("Запуск браузера");
-        driver = new ChromeDriver();
+        driver = new EventFiringWebDriver(new ChromeDriver(cap));
+        driver.register(new TestUtils.MyListener());
         wait = new WebDriverWait(driver, 10);
+
     }
 
     @After
@@ -50,6 +65,8 @@ public class NewWindowTest {
 
         driver.get("http://localhost/litecart/admin/?app=countries&doc=countries");
         driver.findElement(By.cssSelector(".button")).click();
+
+        driver.manage().logs().get("browser").forEach(l -> System.out.println(l));
 
 
         List<WebElement> ExternalLinks = driver.findElements(By.cssSelector(".fa-external-link"));
