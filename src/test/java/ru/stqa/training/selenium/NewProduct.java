@@ -17,12 +17,18 @@ package ru.stqa.training.selenium;
  */
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
+
+import java.io.File;
 
 import java.util.Random;
 import java.util.logging.Logger;
@@ -64,17 +70,64 @@ public class NewProduct {
         TestUtils.logout(driver, wait);
     }
 
-    public void addProduct() {
+    public void addProduct() throws InterruptedException {
 
-        String firstname = TestUtils.generateString(new Random(), "qazwsxedcrfvtgbyhnujmikolp", 10);
+        String name = TestUtils.generateString(new Random(), "qazwsxedcrfvtgbyhnujmikolp", 8);
+
         driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog");
         driver.findElement(By.linkText("Add New Product")).click();
 
-//        General
+//      Главная
         driver.findElement(By.cssSelector("[href='#tab-general']")).click();
         wait.until(presenceOfElementLocated(By.cssSelector("[name=status]")));
         driver.findElement(By.cssSelector("[name=status][value='1']")).click();
 
+        driver.findElement(By.cssSelector("[name='name[en]']")).sendKeys(name);
+        driver.findElement(By.cssSelector("[name='code']")).sendKeys(TestUtils.generateString(new Random(), "qazwsxedcrfvtgbyhnujmikolp", 6));
+        if (driver.findElement(By.cssSelector("[data-name=Root]")).isSelected())
+            driver.findElement(By.cssSelector("[data-name=Root]")).click();
+        driver.findElement(By.cssSelector("[data-name='Rubber Ducks']")).click();
+        driver.findElement(By.cssSelector("[name='product_groups[]'][value='1-3']")).click();
+        WebElement quantity = driver.findElement(By.cssSelector("input[name= quantity]"));
+        quantity.clear();
+        quantity.sendKeys(TestUtils.generateString(new Random(), "123456789", 1));
+        new Select(driver.findElement(By.cssSelector("[name=sold_out_status_id]"))).selectByValue("2");
+        File file = new File("./src/test/resources/images/zjdun.jpg");
+        System.out.println(file.getAbsolutePath());
+        driver.findElement(By.cssSelector("[name='new_images[]']")).sendKeys(file.getAbsolutePath());
+        driver.findElement(By.cssSelector("[name='date_valid_from']")).sendKeys("17.03.2017");
+        driver.findElement(By.cssSelector("[name='date_valid_to']")).sendKeys("17.04.2017");
+        Thread.sleep(3000); //проверяла, что там нагенерировалось
+
+
+        //Информация
+        driver.findElement(By.cssSelector("[href='#tab-information']")).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[name=manufacturer_id]")));
+        new Select(driver.findElement(By.cssSelector("[name=manufacturer_id]"))).selectByValue("1");
+        driver.findElement(By.cssSelector("[name='short_description[en]']")).sendKeys(TestUtils.generateString(new Random(), "qazwsx edcrfvtg byhnujmikolp", 25));
+        driver.findElement(By.cssSelector(".trumbowyg-editor")).sendKeys(TestUtils.generateString(new Random(), "qazwsxe dcrfvtg byh nujmikolp", 25));
+        Thread.sleep(3000);
+
+
+        //Стоимость
+        driver.findElement(By.cssSelector("[href='#tab-prices']")).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[name='purchase_price']")));
+        WebElement pr = driver.findElement(By.cssSelector("[name='purchase_price']"));
+        pr.clear();
+        pr.sendKeys(TestUtils.generateString(new Random(), "123456789", 2));
+        new Select(driver.findElement(By.cssSelector("[name='purchase_price_currency_code']"))).selectByValue("USD");
+        driver.findElement(By.cssSelector("[name='prices[USD]']")).sendKeys("20.0000");
+        driver.findElement(By.cssSelector("[name='prices[EUR]']")).sendKeys("18.0000");
+        Thread.sleep(3000);
+
+
+        //Сохранить
+        driver.findElement(By.cssSelector("[name='save']")).click();
+
+        //Проверка добавления
+        driver.findElement(By.cssSelector("#doc-catalog span")).click();
+        driver.findElement(By.linkText("Rubber Ducks")).click();
+        Assert.assertTrue(driver.findElement(By.linkText(name)).isDisplayed());
 
 
     }

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7283398e-388b-4e7e-a093-f1207f9f2b80" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -30,11 +29,9 @@
       <file leaf-file-name="CountryTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="74" column="54" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,11 +48,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewProduct.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NewProduct.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="403">
+              <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/FirstTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterUser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/RegisterUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="58" column="90" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowserMessage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="763">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="2" selection-end-line="75" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -66,43 +97,11 @@
       <file leaf-file-name="NewWindowTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
+            <state relative-caret-position="628">
+              <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BrowserMessage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewProduct.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/NewProduct.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirstTest.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/FirstTest.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -120,16 +119,10 @@
       <file leaf-file-name="TestUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
+            <state relative-caret-position="394">
               <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2361#2362#0" expanded="true" />
-                <element signature="e#2407#2408#0" expanded="true" />
-                <element signature="e#2505#2506#0" expanded="true" />
-                <element signature="e#2563#2564#0" expanded="true" />
-                <element signature="e#2655#2656#0" expanded="true" />
-                <element signature="e#2708#2709#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -515,10 +508,10 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/RegisterUser.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TrueProduct.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java" />
       </list>
     </option>
   </component>
@@ -541,7 +534,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -551,6 +544,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="selenium-training-4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selenium-training-4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,6 +612,20 @@
               <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="selenium-training-4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -617,7 +650,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -627,7 +660,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="JUnit.BrowserMessage">
+  <component name="RunManager" selected="JUnit.NewProduct">
     <configuration default="false" name="NewProduct.newProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1031,10 +1064,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BrowserMessage" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.NewWindowTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NewWindowTest.CheckOpenWindows" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.NewProduct" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.NewProduct" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BrowserMessage" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.NewWindowTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NewWindowTest.CheckOpenWindows" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.NewProduct.newProduct" />
       </list>
     </recent_temporary>
@@ -1059,26 +1092,26 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BrowserMessage - 2017.03.27 at 18h 24m 25s.xml">
-      <configuration name="BrowserMessage" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 19h 39m 55s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BrowserMessage - 2017.03.27 at 18h 29m 26s.xml">
-      <configuration name="BrowserMessage" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 19h 40m 45s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest - 2017.03.27 at 15h 35m 33s.xml">
-      <configuration name="NewWindowTest" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 19h 43m 36s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest - 2017.03.27 at 16h 27m 07s.xml">
-      <configuration name="NewWindowTest" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 19h 44m 27s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest - 2017.03.27 at 17h 42m 40s.xml">
-      <configuration name="NewWindowTest" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 19h 48m 16s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest - 2017.03.27 at 18h 01m 39s.xml">
-      <configuration name="NewWindowTest" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 19h 52m 17s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 14h 59m 08s.xml">
-      <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
+    <history-entry file="NewProduct - 2017.03.28 at 20h 11m 06s.xml">
+      <configuration name="NewProduct" configurationId="JUnit" />
     </history-entry>
     <history-entry file="NewWindowTest_CheckOpenWindows - 2017.03.27 at 15h 29m 04s.xml">
       <configuration name="NewWindowTest.CheckOpenWindows" configurationId="JUnit" />
@@ -1097,19 +1130,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280522" sideWeight="0.42369264" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280522" sideWeight="0.40928495" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2609506" sideWeight="0.33084312" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2609506" sideWeight="0.3388474" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2609506" sideWeight="0.6691569" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2609506" sideWeight="0.6611526" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2614728" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26467448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1151,6 +1184,96 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1332">
+          <caret line="74" column="54" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TrueProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1512">
+          <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="75" column="46" lean-forward="true" selection-start-line="75" selection-start-column="46" selection-end-line="75" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/NewProduct.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/FirstTest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/RegisterUser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/CountryTest.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/AdminPanelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1098">
@@ -1165,9 +1288,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="57" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,7 +1306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="846">
           <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,9 +1313,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="58" column="92" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1213,9 +1331,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="57" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,7 +1349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="846">
           <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,9 +1356,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
           <caret line="58" column="92" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,12 +1394,6 @@
           <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2563#2564#0" expanded="true" />
-            <element signature="e#2655#2656#0" expanded="true" />
-            <element signature="e#2708#2709#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1296,7 +1403,7 @@
         <state relative-caret-position="702">
           <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1324,7 +1431,7 @@
         <state relative-caret-position="540">
           <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1357,7 +1464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1372,21 +1478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/FirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/classes/test/ru/stqa/training/selenium/AdminPanelTest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,7 +1499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1440,16 +1534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/RegisterUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="58" column="92" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TrueProduct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -1462,34 +1546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/TestUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
+        <state relative-caret-position="394">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2361#2362#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2563#2564#0" expanded="true" />
-            <element signature="e#2655#2656#0" expanded="true" />
-            <element signature="e#2708#2709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="84" column="8" lean-forward="true" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1498,8 +1556,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/CountryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="74" column="54" lean-forward="false" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="54" />
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/RegisterUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="58" column="90" lean-forward="false" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewWindowTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="85" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1508,8 +1582,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/BrowserMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="54" column="33" lean-forward="true" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="763">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="2" selection-end-line="75" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/FirstTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ru/stqa/training/selenium/NewProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

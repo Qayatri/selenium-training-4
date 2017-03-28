@@ -71,8 +71,8 @@ public class BrowserMessage {
     }
 
     public void ducksCatalog() {
-        List<Object[]> list = new ArrayList<>();
-        getProductLinks(0).forEach(link -> list.add(new Object[]{link}));
-        driver.manage().logs().get("browser");
+//        List<Object[]> list = new ArrayList<>();
+//        getProductLinks(0).forEach(link -> list.add(new Object[]{link}));
+//        driver.manage().logs().get("browser");
     }
 }
