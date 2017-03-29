@@ -1,11 +1,14 @@
 package ru.stqa.training.selenium.Tests;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
@@ -14,19 +17,17 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.training.selenium.TestUtils;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 
-/**
- * Created by nrpo-sorokina on 27.03.17.
- */
+
 public class BrowserMessage {
 
     private EventFiringWebDriver driver;
     private WebDriverWait wait;
+    public LogEntries log;
 
 
     @Before
@@ -61,19 +62,36 @@ public class BrowserMessage {
         // Вход
         TestUtils.loginAsAdmin(driver, wait);
 
-        driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog");
+        driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog&category_id=1");
         ducksCatalog();
-
-
-        driver.manage().logs().get("browser").forEach(l -> System.out.println(l));
 
         // Выход
         TestUtils.logout(driver, wait);
     }
 
     public void ducksCatalog() {
-//        List<Object[]> list = new ArrayList<>();
-//        getProductLinks(0).forEach(link -> list.add(new Object[]{link}));
-//        driver.manage().logs().get("browser");
+        driver.findElement(By.linkText("Subcategory")).click();
+        List<WebElement> duckList = driver.findElements(By.cssSelector("#content > form > table > tbody  td:nth-child(3) > a"));
+        System.out.println("Товаров в подкатегории: " + duckList.size());
+        for (int i= 0 ; i <duckList.size() ; i++ ){
+            driver.findElements(By.cssSelector("#content > form > table > tbody  td:nth-child(3) > a")).get(i).click();
+            System.out.println("Товар: "+(i+1));
+            wait.until(driver1 -> driver1.findElement(By.linkText("General")).isDisplayed());
+            log = driver.manage().logs().get("browser");
+
+            Assert.assertTrue("Сообщения лога:\n" + printLog(log),
+                    log.getAll().isEmpty());
+
+            driver.navigate().back();
+        }
     }
+
+    private String printLog(LogEntries log) {
+        String logStr = "";
+        for(LogEntry entry : log) {
+            logStr += entry.toString() + "\n";
+        }
+        return logStr;
+    }
+
 }
