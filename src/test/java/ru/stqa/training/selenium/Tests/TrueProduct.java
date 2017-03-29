@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Tests;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -13,6 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import ru.stqa.training.selenium.TestUtils;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;

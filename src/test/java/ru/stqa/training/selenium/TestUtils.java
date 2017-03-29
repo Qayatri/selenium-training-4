@@ -59,6 +59,11 @@ public final class TestUtils {
         return new String(text);
     }
 
+    public static boolean isElementPresent(WebDriver webdriver, By by){
+        return webdriver.findElements(by).size() > 0;
+    }
+
+
 
     public static class MyListener extends AbstractWebDriverEventListener {
         @Override
@@ -76,5 +81,6 @@ public final class TestUtils {
             System.out.println(throwable);
         }
     }
+
 
 }

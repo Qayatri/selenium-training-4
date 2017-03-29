@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Tests;
 
 /*
 Сделайте сценарий для добавления нового товара (продукта) в учебном приложении litecart (в админке).
@@ -27,6 +27,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.WebElement;
+import ru.stqa.training.selenium.TestUtils;
 
 import java.io.File;
 

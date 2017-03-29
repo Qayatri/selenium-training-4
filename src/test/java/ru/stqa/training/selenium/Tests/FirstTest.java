@@ -1,4 +1,4 @@
-package ru.stqa.training.selenium;
+package ru.stqa.training.selenium.Tests;
 
 
 import org.junit.After;
