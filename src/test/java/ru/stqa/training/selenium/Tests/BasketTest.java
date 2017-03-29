@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.training.selenium.TestUtils;
 import ru.stqa.training.selenium.app.Application;
 
-//Версия дял задания 19
+//Версия для задания 19
 public class BasketTest {
 
     @Test
@@ -20,62 +20,17 @@ public class BasketTest {
         Application app = new Application();
 
         app.openMainPage();
+        for (int i = 0; i < 3; i++) {
+            app.addProduct();
+        }
+        app.clearBasket();
         app.afterTest();
     }
 
 
-//    @Test
-//    public void ProductBasket() {
-//
-//        driver.get("http://localhost/litecart/"); //с главной
-////        addProduct(By.cssSelector("#box-most-popular > div > ul > li:nth-child(1) > a.link"));
-//
-////        driver.get("http://localhost/litecart/en/rubber-ducks-c-1/"); //из каталога
-////        addProduct(By.cssSelector("#box-category > div > ul.listing-wrapper.products > li:nth-child(2) > a.link"));
-//
-//        System.out.println("Добавляем продукты в корзину");
-//        for (int i = 0; i < 3; i++) {
-//            addProduct(By.cssSelector("#box-most-popular > div > ul > li:nth-child(1) > a.link"));
-//        }
-//
-//        driver.findElement(By.cssSelector("#cart > a.link")).click();
-//        System.out.println("Удаляем продукты из корзины");
-//        deleteProduct();
-//
-//    }
-//
-//
-//    public void addProduct(By by) {
-//
-//        driver.findElement(by).click();
-//
-//        Integer count = Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText());
-//        if (TestUtils.isElementPresent(driver, By.cssSelector("[name='options[Size]']"))) {
-//            new Select(driver.findElement(By.cssSelector("[name='options[Size]']"))).selectByIndex(1);
-//        }
-//        driver.findElement(By.cssSelector("[name='add_cart_product']")).click();
-//        wait.until((WebDriver d) -> count != Integer.parseInt(d.findElement(By.cssSelector("span.quantity")).getText()));
-//
-//        driver.findElement(By.cssSelector("#site-menu > ul > li.general-0 > a")).click();
-//
-//    }
-//
-//    public void deleteProduct() {
-//
-//        while (!TestUtils.isElementPresent(driver, By.cssSelector("#checkout-cart-wrapper > p:nth-child(1) > em"))) {
-//
-//            if (TestUtils.isElementPresent(driver, By.cssSelector("[name='remove_cart_item']"))) {
-//                driver.findElement(By.cssSelector("[name=remove_cart_item]")).click();
-//            }
-//            Integer sizeProduct = driver.findElements(By.cssSelector("[name =cart_form]")).size();
-//            wait.until((WebDriver d) -> d.findElements(By.cssSelector("[name =cart_form]")).size() != sizeProduct ||
-//                    !TestUtils.isElementPresent(driver, By.cssSelector("[name =cart_form]")));
-//        }
-//    }
 
-}
 
-/*//Версия здя задания 13
+/*Версия для задания 13
 public class BasketTest {
 
     private WebDriver driver;
@@ -116,7 +71,6 @@ public class BasketTest {
 
     }
 
-
     public void addProduct(By by) {
 
         driver.findElement(by).click();
@@ -130,19 +84,6 @@ public class BasketTest {
 
         driver.findElement(By.cssSelector("#site-menu > ul > li.general-0 > a")).click();
 
-    }
-
-    public void deleteProduct() {
-
-        while (!TestUtils.isElementPresent(driver, By.cssSelector("#checkout-cart-wrapper > p:nth-child(1) > em"))) {
-
-            if (TestUtils.isElementPresent(driver, By.cssSelector("[name='remove_cart_item']"))) {
-                driver.findElement(By.cssSelector("[name=remove_cart_item]")).click();
-            }
-            Integer sizeProduct = driver.findElements(By.cssSelector("[name =cart_form]")).size();
-            wait.until((WebDriver d) -> d.findElements(By.cssSelector("[name =cart_form]")).size() != sizeProduct ||
-                    !TestUtils.isElementPresent(driver, By.cssSelector("[name =cart_form]")));
-        }
     }
 
 }*/

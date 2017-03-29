@@ -4,16 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by nrpo-sorokina on 29.03.17.
- */
+
 public class Page {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
 
     public Page(WebDriver webDriver) {
-        this.driver = driver;
+        this.driver = webDriver;
         wait = new WebDriverWait(webDriver, 10);
     }
 
