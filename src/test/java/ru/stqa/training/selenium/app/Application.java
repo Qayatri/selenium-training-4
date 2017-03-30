@@ -34,7 +34,7 @@ public class Application {
     }
 
     public void openMainPage() {
-        page.open();
+        page.open("http://localhost/litecart/en/");
     }
 
     public void addProduct() {

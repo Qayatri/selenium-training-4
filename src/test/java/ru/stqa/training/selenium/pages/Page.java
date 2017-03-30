@@ -15,8 +15,8 @@ public class Page {
         wait = new WebDriverWait(webDriver, 10);
     }
 
-    public void open(){
-        driver.get("http://localhost/litecart/en/");
+    public void open(String string){
+        driver.get(string);
     }
 
     boolean isElementPresent(WebDriver webDriver, By by) {
