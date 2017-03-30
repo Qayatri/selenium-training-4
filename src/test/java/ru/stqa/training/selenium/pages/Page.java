@@ -15,6 +15,10 @@ public class Page {
         wait = new WebDriverWait(webDriver, 10);
     }
 
+    public void open(){
+        driver.get("http://localhost/litecart/en/");
+    }
+
     boolean isElementPresent(WebDriver webDriver, By by) {
         return webDriver.findElements(by).size() > 0;
     }

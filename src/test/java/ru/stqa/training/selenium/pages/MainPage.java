@@ -10,10 +10,6 @@ public class MainPage extends Page {
         super(webDriver);
     }
 
-    public void open() {
-        driver.get("http://localhost/litecart/en/");
-    }
-
     public void clickProduct(){
         driver.findElement(By.cssSelector("#box-most-popular > div > ul > li:nth-child(1) > a.link")).click();
     }

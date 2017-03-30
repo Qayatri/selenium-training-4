@@ -16,9 +16,14 @@ public class ProductPage extends Page {
         }
     }
 
-    public void clickAddButton(int count) {
+    public void clickAddButton() {
+        int count = getBasketSize();
         driver.findElement(By.cssSelector("[name='add_cart_product']")).click();
-        wait.until((WebDriver d) -> count != Integer.parseInt(d.findElement(By.cssSelector("span.quantity")).getText()));
+        wait.until((WebDriver d) -> getBasketSize() == count + 1);
+    }
+
+    private int getBasketSize() {
+        return Integer.parseInt(driver.findElement(By.cssSelector("span.quantity")).getText());
     }
 
     public void clickMainPage() {

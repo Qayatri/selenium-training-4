@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.training.selenium.pages.BasketPage;
 import ru.stqa.training.selenium.pages.MainPage;
+import ru.stqa.training.selenium.pages.Page;
 import ru.stqa.training.selenium.pages.ProductPage;
 
 
@@ -14,6 +15,7 @@ public class Application {
     private MainPage mainPage;
     private ProductPage productPage;
     private BasketPage basketPage;
+    private Page page;
 
     public Application() {
         System.out.println("Запуск браузера");
@@ -21,24 +23,25 @@ public class Application {
         mainPage = new MainPage(driver);
         productPage = new ProductPage(driver);
         basketPage = new BasketPage(driver);
+        page = new Page(driver);
     }
 
 
-    public void afterTest() {
+    public void quit() {
         System.out.println("Завершение работы браузера");
         driver.quit();
         driver = null;
     }
 
     public void openMainPage() {
-        mainPage.open();
+        page.open();
     }
 
     public void addProduct() {
-        int basketSize = mainPage.basketSize();
         mainPage.clickProduct();
+
         productPage.selectSize();
-        productPage.clickAddButton(basketSize);
+        productPage.clickAddButton();
         productPage.clickMainPage();
     }
 

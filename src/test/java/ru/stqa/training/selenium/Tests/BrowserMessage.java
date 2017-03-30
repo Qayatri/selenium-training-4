@@ -17,9 +17,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.stqa.training.selenium.TestUtils;
 
-
 import java.util.List;
-import java.util.Set;
 import java.util.logging.Level;
 
 
@@ -58,11 +56,11 @@ public class BrowserMessage {
 
         driver.manage().window().maximize();
 
-        driver.get("http://localhost/litecart/admin/");
+        driver.get("http://192.168.1.98/litecart/admin/");
         // Вход
         TestUtils.loginAsAdmin(driver, wait);
 
-        driver.get("http://localhost/litecart/admin/?app=catalog&doc=catalog&category_id=1");
+        driver.get("http://192.168.1.98/litecart/admin/?app=catalog&doc=catalog&category_id=1");
         ducksCatalog();
 
         // Выход

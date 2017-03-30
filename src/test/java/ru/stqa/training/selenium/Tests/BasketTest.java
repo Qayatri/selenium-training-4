@@ -3,35 +3,35 @@ package ru.stqa.training.selenium.Tests;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.stqa.training.selenium.TestUtils;
 import ru.stqa.training.selenium.app.Application;
 
 //Версия для задания 19
 public class BasketTest {
 
-    @Test
-    public void ProductBasket() {
+    private Application application;
 
-        Application app = new Application();
-
-        app.openMainPage();
-        for (int i = 0; i < 3; i++) {
-            app.addProduct();
-        }
-        app.clearBasket();
-        app.afterTest();
+    @Before
+    public void beforeTest() {
+        application = new Application();
     }
 
+    @After
+    public void afterTest() {
+        application.quit();
+        application = null;
+    }
+
+    @Test
+    public void ProductBasket() {
+        application.openMainPage();
+        for (int i = 0; i < 3; i++) {
+            application.addProduct();
+        }
+        application.clearBasket();
+    }
 }
 
-
-
-/*Версия для задания 13
+/*
 public class BasketTest {
 
     private WebDriver driver;
@@ -46,7 +46,7 @@ public class BasketTest {
     }
 
     @After
-    public void afterTest() {
+    public void quit() {
         System.out.println("Завершение работы браузера");
         driver.quit();
         driver = null;

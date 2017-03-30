@@ -3,6 +3,8 @@ package ru.stqa.training.selenium.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import java.util.function.Function;
+
 
 public class BasketPage extends Page {
 
@@ -18,7 +20,7 @@ public class BasketPage extends Page {
     public void deleteProduct() {
         removeButton();
         Integer sizeProduct = driver.findElements(By.cssSelector("[name =cart_form]")).size();
-        wait.until((WebDriver d) -> d.findElements(By.cssSelector("[name =cart_form]")).size() != sizeProduct ||
+        wait.until((Function<WebDriver, Object>) driver -> driver.findElements(By.cssSelector("[name =cart_form]")).size() != sizeProduct ||
                 !isElementPresent(driver, By.cssSelector("[name =cart_form]")));
     }
 
