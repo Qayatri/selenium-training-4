@@ -7,17 +7,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import ru.stqa.training.selenium.TestUtils;
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.text.ParseException;
 import java.util.*;
 import java.util.function.Supplier;
 
@@ -42,13 +36,12 @@ public class TrueProduct {
     }
 
     @Parameterized.Parameters
-    public static Collection<Object[]> provideParameters() {
-        //noinspection RedundantArrayCreation
-        return Arrays.asList(new Object[][]{
-                {(Supplier<WebDriver>) ChromeDriver::new},
-//                {(Supplier<WebDriver>) FirefoxDriver::new},
-//                {(Supplier<WebDriver>) InternetExplorerDriver::new}
-        });
+    public static Iterable<? extends Object> provideParameters() {
+        return Arrays.asList(
+                (Supplier<WebDriver>) ChromeDriver::new,
+                (Supplier<WebDriver>) FirefoxDriver::new,
+                (Supplier<WebDriver>) InternetExplorerDriver::new
+        );
     }
 
     @Before
@@ -68,38 +61,78 @@ public class TrueProduct {
 
     @Test
     public void productTest() throws InterruptedException {
-        System.out.println("Открыть старницу http://localhost/litecart/admin");
+
         driver.get("http://localhost/litecart/en/");
-//        List<WebElement> productContainers = getProductContainers(driver);
-//        System.out.println("Found " + productContainers.size() + " products");
-//        for (WebElement currentProductContainer : productContainers) {
-//            ProductInfo productInfo = getProductInfo(currentProductContainer);
-//            openProductDetails(currentProductContainer);
-//            ProductInfo detailsProductInfo = getProductInfoFromDetailsScreen(driver);
-//            assertSameProductInfo(productInfo, detailsProductInfo);
-//            driver.switchTo().window(new ArrayList<>(driver.getWindowHandles()).get(0));
-//        }
+        // На главной странице
+        String mainName = driver.findElement(
+                By.cssSelector("#box-campaigns .product:first-child .name")).getText();
+        String mainRegPrice = driver.findElement(
+                By.cssSelector("#box-campaigns .product:first-child .regular-price")).getText();
+        String mainCampPrice = driver.findElement(
+                By.cssSelector("#box-campaigns .product:first-child .campaign-price")).getText();
+        getStyleAndColorProduct("#box-campaigns");
+
+
+        // На странице товара
+        driver.findElement(By.cssSelector("#box-campaigns > div > ul > li > a.link")).click();
+        String duckName = driver.findElement(
+                By.cssSelector("#box-product h1")).getText();
+        String duckRegPrice = driver.findElement(
+                By.cssSelector("#box-product .regular-price")).getText();
+        String duckCampPrice = driver.findElement(
+                By.cssSelector("#box-product .campaign-price")).getText();
+        getStyleAndColorProduct("#box-product");
+
+        //Сравнение товара
+
+        Assert.assertEquals(mainName, duckName);
+        Assert.assertEquals(mainRegPrice, duckRegPrice);
+        Assert.assertEquals(mainCampPrice, duckCampPrice);
+
     }
 
-//    public void  isGreyColor(String colorRGB){
-//        System.out.println("--> Цвет старой цены: "+colorRGB);
-//        String[] greyColor = colorRGB.replaceAll("[a-zA-Z()]","").split(", ");
-//
-//        Assert.assertEquals(greyColor[0], greyColor[1]);
-//        Assert.assertEquals(greyColor[0], greyColor[2]);
-//        Assert.assertEquals(greyColor[1], greyColor[2]);
-//        System.out.println("--> Совпадение с серым цветом");
-//    }
-//
-//    public void  isRedColor(String colorRGB){
-//        System.out.println("--> Цвет новой цены: "+colorRGB);
-//        String[] greyColor = colorRGB.replaceAll("[a-zA-Z()]","").split(", ");
-//
-//        Assert.assertTrue( Integer.parseInt(greyColor[0]) != 0);
-//        Assert.assertTrue(Integer.parseInt(greyColor[1]) == 0);
-//        Assert.assertTrue(Integer.parseInt(greyColor[2]) == 0);
-//        System.out.println("--> Совпадение с красным цветом");
-//    }
+
+    public void getStyleAndColorProduct(String selector ){
+
+
+        WebElement oldPrice = driver.findElement(By.cssSelector(selector+" s"));
+        String colorOldPrice = oldPrice.getCssValue("color");
+        float sizeOldPrice = Float.parseFloat(oldPrice.getCssValue(
+                "font-size").replaceAll("[a-zA-Z]", ""));
+
+        WebElement  newPrice = driver.findElement(By.cssSelector(selector+" strong"));
+        String colorNewPrice = newPrice.getCssValue("color");
+        float sizeNewPrice = Float.parseFloat(newPrice.getCssValue(
+                "font-size").replaceAll("[a-zA-Z]", ""));
+
+        Assert.assertTrue("Новая цена больше старой!",
+                sizeNewPrice > sizeOldPrice);
+        Assert.assertTrue("Стиль новой цены не жирный",
+                newPrice.getTagName().equals("strong"));
+        //цена не зачеркнута
+        Assert.assertTrue(oldPrice.getTagName().equals("s"));
+        //цвета
+        isGreyColor(colorOldPrice);
+        isRedColor(colorNewPrice);
+
+    }
+
+
+    public void isGreyColor(String color){
+        String[] isGray = color.replaceAll("[a-zA-Z()]","").split(", ");
+        Assert.assertEquals(isGray[0], isGray[1]);
+        Assert.assertEquals(isGray[0], isGray[2]);
+        Assert.assertEquals(isGray[1], isGray[2]);
+    }
+
+    public void  isRedColor(String color){
+
+        String[] isRed = color.replaceAll("[a-zA-Z()]","").split(", ");
+        Assert.assertTrue("Не совпадает цвет", Integer.parseInt(isRed[0]) != 0);
+        Assert.assertTrue("Не совпадает цвет",Integer.parseInt(isRed[1]) == 0);
+        Assert.assertTrue("Не совпадает цвет",Integer.parseInt(isRed[2]) == 0);
+    }
+}
 
 //    @Test
 //    public void productTest() throws InterruptedException {
@@ -217,4 +250,4 @@ public class TrueProduct {
 //                    '}';
 //        }
 //    }
-}
+//}
