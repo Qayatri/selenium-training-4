@@ -46,15 +46,14 @@ public class TrueProduct {
         //noinspection RedundantArrayCreation
         return Arrays.asList(new Object[][]{
                 {(Supplier<WebDriver>) ChromeDriver::new},
-                {(Supplier<WebDriver>) FirefoxDriver::new},
-                {(Supplier<WebDriver>) InternetExplorerDriver::new}
+//                {(Supplier<WebDriver>) FirefoxDriver::new},
+//                {(Supplier<WebDriver>) InternetExplorerDriver::new}
         });
     }
 
     @Before
     public void beforeTest() {
         System.out.println("Запуск браузера");
-//        System.setProperty("webdriver.chrome.driver", "E:\\Downloads\\chromedriver_win32\\chromedriver.exe");
         driver = webDriverSupplier.get();
         decimalFormat = (DecimalFormat) DecimalFormat.getInstance();
         decimalFormat.setParseBigDecimal(true);
@@ -69,118 +68,153 @@ public class TrueProduct {
 
     @Test
     public void productTest() throws InterruptedException {
-        System.out.println("Открыть старницу http://192.168.1.98/litecart/admin");
-        driver.get("http://192.168.1.98/litecart/en/");
-        List<WebElement> productContainers = getProductContainers(driver);
-        System.out.println("Found " + productContainers.size() + " products");
-        for (WebElement currentProductContainer : productContainers) {
-            ProductInfo productInfo = getProductInfo(currentProductContainer);
-            openProductDetails(currentProductContainer);
-            ProductInfo detailsProductInfo = getProductInfoFromDetailsScreen(driver);
-            assertSameProductInfo(productInfo, detailsProductInfo);
-            driver.switchTo().window(new ArrayList<>(driver.getWindowHandles()).get(0));
-        }
+        System.out.println("Открыть старницу http://localhost/litecart/admin");
+        driver.get("http://localhost/litecart/en/");
+//        List<WebElement> productContainers = getProductContainers(driver);
+//        System.out.println("Found " + productContainers.size() + " products");
+//        for (WebElement currentProductContainer : productContainers) {
+//            ProductInfo productInfo = getProductInfo(currentProductContainer);
+//            openProductDetails(currentProductContainer);
+//            ProductInfo detailsProductInfo = getProductInfoFromDetailsScreen(driver);
+//            assertSameProductInfo(productInfo, detailsProductInfo);
+//            driver.switchTo().window(new ArrayList<>(driver.getWindowHandles()).get(0));
+//        }
     }
 
-    private void assertSameProductInfo(ProductInfo productInfo, ProductInfo detailsProductInfo) {
-        System.out.println("ProductInfo: " + productInfo + ", detailsProductInfo: " + detailsProductInfo);
-        Assert.assertEquals(productInfo.getName(), detailsProductInfo.getName());
-        Assert.assertEquals(productInfo.getPrice(), detailsProductInfo.getPrice());
-        Assert.assertEquals(productInfo.getSpecialPrice(), detailsProductInfo.getSpecialPrice());
-    }
+//    public void  isGreyColor(String colorRGB){
+//        System.out.println("--> Цвет старой цены: "+colorRGB);
+//        String[] greyColor = colorRGB.replaceAll("[a-zA-Z()]","").split(", ");
+//
+//        Assert.assertEquals(greyColor[0], greyColor[1]);
+//        Assert.assertEquals(greyColor[0], greyColor[2]);
+//        Assert.assertEquals(greyColor[1], greyColor[2]);
+//        System.out.println("--> Совпадение с серым цветом");
+//    }
+//
+//    public void  isRedColor(String colorRGB){
+//        System.out.println("--> Цвет новой цены: "+colorRGB);
+//        String[] greyColor = colorRGB.replaceAll("[a-zA-Z()]","").split(", ");
+//
+//        Assert.assertTrue( Integer.parseInt(greyColor[0]) != 0);
+//        Assert.assertTrue(Integer.parseInt(greyColor[1]) == 0);
+//        Assert.assertTrue(Integer.parseInt(greyColor[2]) == 0);
+//        System.out.println("--> Совпадение с красным цветом");
+//    }
 
-    private void openProductDetails(WebElement productContainer) {
-        String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
-        productContainer.findElement(By.className("link")).sendKeys(selectLinkOpeninNewTab);
-        List<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(windowHandles.get(windowHandles.size() - 1));
-    }
-
-    private List<WebElement> getProductContainers(WebDriver driver) {
-        return driver.findElements(By.className("product"));
-    }
-
-    private ProductInfo getProductInfo(WebElement productContainer) {
-        return ProductInfo.create(
-                getProductPrice(productContainer),
-                getProductSpecialPrice(productContainer),
-                getProductName(productContainer, By.className("name")));
-    }
-
-    private ProductInfo getProductInfoFromDetailsScreen(WebDriver driver) {
-        WebElement priceWrapper = driver.findElement(By.className("price-wrapper"));
-        return ProductInfo.create(
-                getProductPrice(priceWrapper),
-                getProductSpecialPrice(priceWrapper),
-                getProductName(driver.findElement(By.id("box-product")), By.className("title")));
-    }
-
-    private String getProductName(WebElement productContainer, By by) {
-        return productContainer.findElement(by).getText();
-    }
-
-    private BigDecimal getProductPrice(WebElement productContainer) {
-        Optional<WebElement> priceContainer = TestUtils.findElement(productContainer, By.className("price"));
-        if (!priceContainer.isPresent()) {
-            priceContainer = TestUtils.findElement(productContainer, By.className("regular-price"));
-        }
-        return parsePrice(priceContainer.get().getText());
-    }
-
-    private BigDecimal getProductSpecialPrice(WebElement productContainer) {
-        Optional<WebElement> priceContainer = TestUtils.findElement(productContainer, By.className("campaign-price"));
-        return priceContainer.isPresent()
-                ? parsePrice(priceContainer.get().getText())
-                : null;
-    }
-
-    private BigDecimal parsePrice(String priceText) {
-        if (priceText == null || priceText.isEmpty()) {
-            throw new IllegalArgumentException("Price text is empty");
-        }
-
-        try {
-            return (BigDecimal) decimalFormat.parse(priceText.replace("$", ""));
-        } catch (ParseException e) {
-            throw new IllegalStateException("Cannot parse price text");
-        }
-    }
-
-    private static class ProductInfo {
-
-        private final BigDecimal price;
-        private final String name;
-        private final BigDecimal specialPrice;
-
-        private ProductInfo(BigDecimal price, BigDecimal specialPrice, String name) {
-            this.price = price;
-            this.name = name;
-            this.specialPrice = specialPrice;
-        }
-
-        public static ProductInfo create(BigDecimal price, BigDecimal specialPrice, String name) {
-            return new ProductInfo(price, specialPrice, name);
-        }
-
-        public BigDecimal getPrice() {
-            return price;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public Optional<BigDecimal> getSpecialPrice() {
-            return Optional.ofNullable(specialPrice);
-        }
-
-        @Override
-        public String toString() {
-            return "ProductInfo{" +
-                    "price=" + price +
-                    ", name='" + name + '\'' +
-                    ", specialPrice=" + specialPrice +
-                    '}';
-        }
-    }
+//    @Test
+//    public void productTest() throws InterruptedException {
+//        System.out.println("Открыть старницу http://localhost/litecart/admin");
+//        driver.get("http://192.168.1.98/litecart/en/");
+//        List<WebElement> productContainers = getProductContainers(driver);
+//        System.out.println("Found " + productContainers.size() + " products");
+//        for (WebElement currentProductContainer : productContainers) {
+//            ProductInfo productInfo = getProductInfo(currentProductContainer);
+//            openProductDetails(currentProductContainer);
+//            ProductInfo detailsProductInfo = getProductInfoFromDetailsScreen(driver);
+//            assertSameProductInfo(productInfo, detailsProductInfo);
+//            driver.switchTo().window(new ArrayList<>(driver.getWindowHandles()).get(0));
+//        }
+//    }
+//
+//    private void assertSameProductInfo(ProductInfo productInfo, ProductInfo detailsProductInfo) {
+//        System.out.println("ProductInfo: " + productInfo + ", detailsProductInfo: " + detailsProductInfo);
+//        Assert.assertEquals(productInfo.getName(), detailsProductInfo.getName());
+//        Assert.assertEquals(productInfo.getPrice(), detailsProductInfo.getPrice());
+//        Assert.assertEquals(productInfo.getSpecialPrice(), detailsProductInfo.getSpecialPrice());
+//    }
+//
+//    private void openProductDetails(WebElement productContainer) {
+//        String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL, Keys.RETURN);
+//        productContainer.findElement(By.className("link")).sendKeys(selectLinkOpeninNewTab);
+//        List<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(windowHandles.get(windowHandles.size() - 1));
+//    }
+//
+//    private List<WebElement> getProductContainers(WebDriver driver) {
+//        return driver.findElements(By.className("product"));
+//    }
+//
+//    private ProductInfo getProductInfo(WebElement productContainer) {
+//        return ProductInfo.create(
+//                getProductPrice(productContainer),
+//                getProductSpecialPrice(productContainer),
+//                getProductName(productContainer, By.className("name")));
+//    }
+//
+//    private ProductInfo getProductInfoFromDetailsScreen(WebDriver driver) {
+//        WebElement priceWrapper = driver.findElement(By.className("price-wrapper"));
+//        return ProductInfo.create(
+//                getProductPrice(priceWrapper),
+//                getProductSpecialPrice(priceWrapper),
+//                getProductName(driver.findElement(By.id("box-product")), By.className("title")));
+//    }
+//
+//    private String getProductName(WebElement productContainer, By by) {
+//        return productContainer.findElement(by).getText();
+//    }
+//
+//    private BigDecimal getProductPrice(WebElement productContainer) {
+//        Optional<WebElement> priceContainer = TestUtils.findElement(productContainer, By.className("price"));
+//        if (!priceContainer.isPresent()) {
+//            priceContainer = TestUtils.findElement(productContainer, By.className("regular-price"));
+//        }
+//        return parsePrice(priceContainer.get().getText());
+//    }
+//
+//    private BigDecimal getProductSpecialPrice(WebElement productContainer) {
+//        Optional<WebElement> priceContainer = TestUtils.findElement(productContainer, By.className("campaign-price"));
+//        return priceContainer.isPresent()
+//                ? parsePrice(priceContainer.get().getText())
+//                : null;
+//    }
+//
+//    private BigDecimal parsePrice(String priceText) {
+//        if (priceText == null || priceText.isEmpty()) {
+//            throw new IllegalArgumentException("Price text is empty");
+//        }
+//
+//        try {
+//            return (BigDecimal) decimalFormat.parse(priceText.replace("$", ""));
+//        } catch (ParseException e) {
+//            throw new IllegalStateException("Cannot parse price text");
+//        }
+//    }
+//
+//    private static class ProductInfo {
+//
+//        private final BigDecimal price;
+//        private final String name;
+//        private final BigDecimal specialPrice;
+//
+//        private ProductInfo(BigDecimal price, BigDecimal specialPrice, String name) {
+//            this.price = price;
+//            this.name = name;
+//            this.specialPrice = specialPrice;
+//        }
+//
+//        public static ProductInfo create(BigDecimal price, BigDecimal specialPrice, String name) {
+//            return new ProductInfo(price, specialPrice, name);
+//        }
+//
+//        public BigDecimal getPrice() {
+//            return price;
+//        }
+//
+//        public String getName() {
+//            return name;
+//        }
+//
+//        public Optional<BigDecimal> getSpecialPrice() {
+//            return Optional.ofNullable(specialPrice);
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return "ProductInfo{" +
+//                    "price=" + price +
+//                    ", name='" + name + '\'' +
+//                    ", specialPrice=" + specialPrice +
+//                    '}';
+//        }
+//    }
 }
